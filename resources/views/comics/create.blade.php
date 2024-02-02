@@ -48,5 +48,11 @@
                 <button type="submit" class="btn btn-primary">Crea un nuovo fumetto</button>
             </div>
         </form>
+        <div class="mt-3">
+            Oppure
+            <a href="{{ route('comics.index') }}" type="button" class="btn btn-info align-self-center">
+                Torna alla tabella principale
+            </a>
+        </div>
     </div>
 @endsection

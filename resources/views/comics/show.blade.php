@@ -48,7 +48,8 @@
                 </div>
             </div>
         </div>
-        <a href="{{ route('comics.index') }}" type="button" class="btn btn-primary align-self-center">Torna alla tabella
-            principale</a>
+        <a href="{{ route('comics.index') }}" type="button" class="btn btn-info align-self-center">
+            Torna alla tabella principale
+        </a>
     </div>
 @endsection
