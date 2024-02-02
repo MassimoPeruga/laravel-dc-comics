@@ -12,9 +12,9 @@
     - show()
     - create()
     - store()
-- [ ] **Milestone 3** <br/>
+- [x] **Milestone 3** <br/>
     - Completate le operazioni CRUD.
 - [x] **Bonus** <br/>
     creare il seeder per la tabella comics utilizzando il file in allegato.
-- [ ] **Bonus 2** <br/>
+- [x] **Bonus 2** <br/>
     tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
