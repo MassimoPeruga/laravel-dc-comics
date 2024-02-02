@@ -13,6 +13,7 @@
                     <th scope="col" class="col-3">Data di creazione</th>
                     <th scope="col" class="col-3">Ultimo aggiornamento</th>
                     <th scope="col" class="col-2">Pagina dettaglio</th>
+                    <th scope="col" class="col">Modifica</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,11 @@
                         <td class="text-center align-middle">
                             <a href="{{ route('comics.show', $comic) }}" type="button" class="btn btn-info btn-sm">
                                 Vedi Dettagli
+                            </a>
+                        </td>
+                        <td class="text-center align-middle">
+                            <a href="{{ route('comics.edit', $comic) }}" type="button" class="btn btn-warning btn-sm">
+                                Modifica
                             </a>
                         </td>
                     </tr>

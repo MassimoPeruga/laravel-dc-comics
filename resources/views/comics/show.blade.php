@@ -48,8 +48,13 @@
                 </div>
             </div>
         </div>
-        <a href="{{ route('comics.index') }}" type="button" class="btn btn-info align-self-center">
-            Torna alla tabella principale
-        </a>
+        <div class="mt-3 d-flex">
+            <a href="{{ route('comics.index') }}" type="button" class="btn btn-info align-self-center me-auto">
+                Torna alla tabella principale
+            </a>
+            <a href="{{ route('comics.edit', $comic) }}" type="button" class="btn btn-warning">
+                Modifica questo fumetto
+            </a>
+        </div>
     </div>
 @endsection
