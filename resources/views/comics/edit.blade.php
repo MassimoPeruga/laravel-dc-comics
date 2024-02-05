@@ -9,49 +9,83 @@
 
             <div class="col-md-6">
                 <label for="Titolo" class="form-label">Titolo</label>
-                <input type="text" class="form-control" id="Titolo" name="title" value="{{ $comic['title'] }}">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="Titolo" name="title"
+                    value="{{ old('title', $comic->title) }}" required>
+                @error('title')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-6">
                 <label for="Serie" class="form-label">Serie</label>
-                <input type="text" class="form-control" id="Serie" name="series" value="{{ $comic['series'] }}">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="Serie"
+                    name="series" value="{{ old('series', $comic->series) }}">
+                @error('series')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-12">
                 <label for="Descrizione" class="form-label">Descrizione</label>
-                <textarea class="form-control" id="Descrizione" rows="3" name="description">{{ $comic['description'] }}</textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" id="Descrizione" rows="3"
+                    name="description">
+                    {{ old('description', $comic->description) }}
+                </textarea>
+                @error('description')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-12">
                 <label for="immagine" class="form-label">Link immagine</label>
-                <input type="text" class="form-control" id="immagine" name="thumb" value="{{ $comic['thumb'] }}">
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="immagine"
+                    name="thumb" value="{{ old('thumb', $comic->thumb) }}">
+                @error('thumb')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-6">
                 <label for="Disegnatori" class="form-label">Disegnatori</label>
-                <textarea class="form-control" id="Disegnatori" rows="3" name="artists">{{ $comic['artists'] }}</textarea>
+                <textarea class="form-control @error('artists') is-invalid @enderror" id="Disegnatori" rows="3" name="artists">
+                    {{ old('artists', $comic->artists) }}
+                </textarea>
+                @error('artists')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-6">
                 <label for="Autori" class="form-label">Autori</label>
-                <textarea class="form-control" id="Autori" rows="3" name="writers">{{ $comic['writers'] }}</textarea>
+                <textarea class="form-control @error('writers') is-invalid @enderror" id="Autori" rows="3" name="writers">
+                    {{ old('writers', $comic->writers) }}
+                </textarea>
+                @error('writers')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-6">
                 <label for="sale_date" class="form-label">Data di vendita</label>
-                <input type="text" class="form-control" id="sale_date" name="sale_date"
-                    value="{{ $comic['sale_date'] }}">
+                <input type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date"
+                    name="sale_date" value="{{ old('sale_date', $comic->sale_date) }}" placeholder="aaaa/mm/gg">
+                @error('sale_date')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-4">
                 <label for="Tipo" class="form-label">Tipo</label>
-                <select id="Tipo" class="form-select" name="type">
-                    <option selected>{{ $comic['type'] }}</option>
-                    @if ($comic['type'] === 'graphic novel')
-                        <option>comic book</option>
-                    @endif
-                    @if ($comic['type'] === 'comic book')
-                        <option>graphic novel</option>
-                    @endif
+                <select id="Tipo" class="form-select @error('type') is-invalid @enderror" name="type">
+                    <option value="comic book" {{ old('type', $comic->type) === 'comic book' ? 'selected' : '' }}></option>
+                    <option value="graphic novel" {{ old('type', $comic->type) === 'graphic novel' ? 'selected' : '' }}>
+                    </option>
                 </select>
+                @error('type')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
+
             <div class="col-md-2">
                 <label for="Prezzo" class="form-label">Prezzo</label>
-                <input type="number" step="0.01" class="form-control" id="Prezzo" name="price"
-                    value="{{ $comic['price'] }}">
+                <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror"
+                    id="Prezzo" name="price" value="{{ old('price', $comic->price) }}">
+                @error('price')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-12 text-center">
                 <button type="submit" class="btn btn-warning">Modifica questo fumetto</button>
