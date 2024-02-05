@@ -20,6 +20,6 @@
     creare il seeder per la tabella comics utilizzando il file in allegato.
 - [x] **Bonus 2** <br/>
     tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
-- [o] **Bonus 3** <br/>
+- [x] **Bonus 3** <br/>
     - validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano.
     - utilizzare le Request personalizzate per validare i dati
